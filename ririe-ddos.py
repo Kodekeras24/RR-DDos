@@ -25,17 +25,6 @@ print("\033[1m                                                                  
 print("\033[1m                                               \033[0m")
 print("\033[1m                                                \033[0m")
 print("\033[33m_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_\033[0m")
-while():
-    username = input('Enter your username: ')
-    password = input('Enter your password: ')
-
-    if username == 'r2' and password == 'r2':
-        print("GUNAKAN SCRIPT INI DENGAN BIJAK...!!")
-        break
-    else:
-        print('Incorrect credentials. Check if you have Caps lock on and try again.')
-        continue
-
 faded_text = fade.fire(logo)
 print(faded_text)
 faded_text2 = fade.brazil(txt)
