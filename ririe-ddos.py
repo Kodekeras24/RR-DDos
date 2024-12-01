@@ -1,3 +1,4 @@
+import socket
 import asyncio
 import aiohttp
 import fade
@@ -27,7 +28,7 @@ print("\033[1m                                                \033[0m")
 print("\033[33m_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_\033[0m")
 faded_text = fade.fire(logo)
 print(faded_text)
-faded_text2 = fade.brazil(txt)
+socket.socket(txt)
 print(faded_text2)
 ask = fade.pinkred("Enter the target IP/URL:")
 url = input(ask)
