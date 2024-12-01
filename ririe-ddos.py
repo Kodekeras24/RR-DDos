@@ -25,7 +25,7 @@ print("\033[1m                                                                  
 print("\033[1m                                               \033[0m")
 print("\033[1m                                                \033[0m")
 print("\033[33m_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_\033[0m")
-while attemps < 100:
+while():
     username = input('Enter your username: ')
     password = input('Enter your password: ')
 
