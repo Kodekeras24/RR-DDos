@@ -13,8 +13,8 @@ month = now.month
 year = now.year
 
 ##############
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-bytes = random._urandom(1042)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+bytes = random._urandom(999)
 #############
 
 os.system("clear")
