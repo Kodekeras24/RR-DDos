@@ -30,8 +30,7 @@ logo = """
 """
 faded_text = fade.fire(logo)
 print(faded_text)
-socket.socket(txt)
-print(faded_text2)
+socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ask = fade.pinkred("Enter the target IP/URL:")
 url = input(ask)
 time.sleep(5),
