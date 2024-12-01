@@ -64,7 +64,7 @@ print("\033[97m                  ⟩⟩  penetrate security layer \033[0m "),
 time.sleep(5),
 print("\033[95m                  ⟩⟩  send Packet \033[0m "),
 time.sleep(5),
-def run():
+def function():
 	data = random._urandom(818)
 	i = random.choice(("[✴️]","[#]"))
 	while True:
